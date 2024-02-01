@@ -18,7 +18,9 @@ jobs:
       - name: Move fonts to shared directory
         run: |
           mkdir -p static/fonts/; mkdir r2dist/
-          mv static/index/fonts/* static/fonts/
+          if [ -d "static/index/fonts" ]; then
+            mv static/index/fonts/* static/fonts/
+          fi
           mv robots.txt static/ r2dist/
           echo "${{ secrets.CF_CONFIG }}" > r2dist/_redirects
 
