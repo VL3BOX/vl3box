@@ -14,7 +14,7 @@ jobs:
 
       - name: Move fonts to shared directory
         run: |
-          ls -al; cd vl3box
+          ls -al
           mkdir static/fonts/; mkdir r2dist/
           mv static/index/fonts/* static/fonts/
           mv robots.txt static/ r2dist/
