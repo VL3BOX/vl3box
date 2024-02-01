@@ -14,10 +14,10 @@ jobs:
 
       - name: Move fonts to shared directory
         run: |
-          mkdir static/fonts/; mkdir r2dist/
+          mkdir -p static/fonts/; mkdir r2dist/
           mv static/index/fonts/* static/fonts/
           mv robots.txt static/ r2dist/
-          echo ${{ secrets.CF_CONFIG }} > r2dist/${{ secrets.CF_CONFIG_NAME }}
+          echo "${{ secrets.CF_CONFIG }}" > r2dist/_redirects
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
