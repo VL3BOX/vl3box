@@ -1,0 +1,31 @@
+name: Upload to Cloudflare Pages
+on:
+  push:
+    branches:
+      - gh-pages
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Move fonts to shared directory
+        run: |
+          mkdir static/fonts/; mkdir r2dist/
+          mv static/index/fonts/* static/fonts/
+          mv static/ r2dist/
+          echo ${{ secrets.CF_CONFIG }} > r2dist/${{ secrets.CF_CONFIG_NAME }}
+
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          projectName: ${{ secrets.CF_PROJECT_NAME }}
+          directory: r2dist/
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
+          wranglerVersion: '3'
