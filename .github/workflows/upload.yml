@@ -21,6 +21,10 @@ jobs:
           if [ -d "static/index/fonts" ]; then
             mv static/index/fonts/* static/fonts/
           fi
+          if [ -d "static/dashboard/fonts" ]; then
+            mv static/dashboard/fonts/element-icons.*.woff static/fonts/element-icons.woff
+            mv static/dashboard/fonts/element-icons.*.tff static/fonts/element-icons.tff
+          fi
           mv robots.txt static/ r2dist/
           echo "${{ secrets.CF_CONFIG }}" > r2dist/_redirects
 
