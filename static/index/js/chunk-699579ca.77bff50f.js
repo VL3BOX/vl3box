@@ -1,2 +1,2 @@
 (window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-699579ca"],{"25da":function(t,a,n){"use strict";n("a3d5")},"8eae":function(t,a,n){"use strict";n.r(a);var e=function(){var t=this;t._self._c;return t._m(0)},s=[function(){var t=this,a=t._self._c;return a("div",{staticClass:"about-detail-wrapper"},[a("div",{staticClass:"m-about-title"},[t._v("剑三真好玩 魔盒真好用")])])}],u={name:"Index",computed:{}},c=u,i=(n("25da"),n("2877")),l=Object(i["a"])(c,e,s,!1,null,null,null);a["default"]=l.exports},a3d5:function(t,a,n){}}]);
-//# sourceMappingURL=chunk-699579ca.657645b3.js.map
+//# sourceMappingURL=chunk-699579ca.77bff50f.js.map
