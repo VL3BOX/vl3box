@@ -1600,6 +1600,15 @@
   text-shadow: 1px 1px 1px #0f2222;
   line-height: 20px;
 }
+.w-skill .w-skill-switch-parse {
+  padding: 5px;
+  float: right;
+  color: #5df9eb;
+  transition: all 0.15s ease;
+}
+.w-skill .w-skill-switch-parse:hover {
+  color: #ff0;
+}
 .w-skill .w-skill-name {
   color: #ff0;
   display: block;
@@ -1611,6 +1620,15 @@
   margin-bottom: 10px;
   font-size: 12px;
   line-height: 20px;
+  white-space: pre-wrap;
+}
+.w-skill .w-skill-talent {
+  color: #04cfb4;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 20px;
+  white-space: pre-wrap;
 }
 .w-skill .w-skill-meta {
   display: block;
