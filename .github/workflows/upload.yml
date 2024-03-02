@@ -24,6 +24,7 @@ jobs:
           fi
           mv robots.txt static/ r2dist/
           echo "${{ secrets.CF_CONFIG }}" > r2dist/_redirects
+          echo "${{ secrets.CF_PAGES_WORKER }}" > r2dist/_worker.js
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
